@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="de-CH"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#10283c"><title>Mein Zug · Testversion 1.9</title><style>
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#19283a;background:#f3f6f8;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.48;cursor:not-allowed}.wrap{max-width:760px;margin:0 auto;padding:18px 15px 80px}.hero{background:linear-gradient(128deg,#10283c,#174b56);color:white;border-radius:21px;padding:21px 22px;margin:7px 0 18px;box-shadow:0 9px 27px #112b3d19}.hero h1{font-size:26px;letter-spacing:-.7px;margin:0}.hero p{color:#d0e4e6;margin:5px 0 0;font-size:14px}.brand{display:flex;gap:12px;align-items:center}.logo{font-size:25px;background:#ffffff17;border-radius:14px;width:48px;height:48px;display:grid;place-items:center}.panel{background:white;border:1px solid #e0e7eb;border-radius:20px;padding:18px;margin-bottom:14px;box-shadow:0 3px 14px #18304808}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.sectionhead h2{font-size:16px;margin:0}.small{color:#687887;font-size:12px}.seg{display:grid;grid-template-columns:1fr 1fr;gap:5px;background:#eaf0f2;padding:5px;border-radius:13px}.seg button{border:0;border-radius:10px;color:#3d5261;background:transparent;padding:11px 7px;font-weight:700;font-size:13px}.seg button.active{background:white;color:#0a4b58;box-shadow:0 1px 5px #10283c1a}.stations{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:9px}.station{display:flex;gap:9px;align-items:center;border:1px solid #dbe4e9;padding:12px 11px;border-radius:12px;font-size:14px;cursor:pointer;min-height:46px}.station:has(input:checked){background:#e9f7f2;border-color:#82cbb4}.station input,.checkline input{accent-color:#14856b;width:17px;height:17px;margin:0;flex-shrink:0}.muted{font-size:12px;color:#697887;margin:10px 0 7px}.searcharea{position:relative}.searcharea input{width:100%;border:1px solid #cad8df;border-radius:12px;padding:13px 13px;outline:none;background:#fff}.searcharea input:focus{border-color:#188c79;box-shadow:0 0 0 3px #188c791c}.suggest{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#fff;border:1px solid #d7e2e8;border-radius:13px;box-shadow:0 13px 30px #19283a24;max-height:220px;overflow:auto;z-index:5}.suggest button{display:block;width:100%;text-align:left;background:#fff;border:0;border-bottom:1px solid #eef1f3;padding:11px 13px}.suggest button:hover{background:#edf7f4}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}.chip{border:1px solid #b8d9d1;color:#195d51;background:#ecf9f5;border-radius:20px;padding:6px 10px;font-size:12px}.chip button{border:0;color:inherit;background:none;margin-left:5px}.options{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.checkline{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600}.go{background:#117a68;border:none;color:#fff;padding:13px 18px;border-radius:12px;font-weight:750}.go:hover{background:#095c4e}.secondary{background:white;border:1px solid #ccd9dc;border-radius:11px;padding:9px 12px;color:#244454}.status{min-height:20px;font-size:13px;color:#607480}.status.error{color:#ab3949}.card{background:#fff;border:1px solid #dce7ec;border-radius:17px;padding:16px;margin:11px 0;box-shadow:0 2px 10px #14283a08}.card.best{border:2px solid #1a987c;background:#fbfffd}.ribbons{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px}.tag{display:inline-flex;align-items:center;border-radius:15px;background:#e9f0f4;color:#416071;padding:5px 9px;font-size:11px;font-weight:700}.tag.besttag{background:#dff7ec;color:#156c50}.times{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px}.times strong{font-size:25px;letter-spacing:-.7px;font-variant-numeric:tabular-nums}.centerline{text-align:center;font-size:11px;color:#6b8190}.rule{height:2px;background:#ccdfe2;margin:5px 0}.placegrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px;font-size:12px}.placegrid>div:last-child{text-align:right}.placegrid b{font-size:14px}.detailhead{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:12px}.linkbtn{border:0;background:transparent;padding:4px;color:#086b60;font-size:13px;font-weight:700}.legs{border-top:1px solid #e4edf0;margin-top:12px;padding-top:9px}.leg{font-size:12px;line-height:1.6;padding:7px 0;border-bottom:1px solid #eef2f4}.foot{margin-top:18px;color:#74848e;font-size:12px;line-height:1.5}.empty{text-align:center;color:#70818d;padding:30px 15px;background:#fff;border:1px dashed #c9d5dc;border-radius:15px}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:4px}.toolbar h2{font-size:18px;margin:0}.loadingdot{display:inline-block;width:10px;height:10px;border:2px solid #bcdcd4;border-top-color:#117a68;border-radius:50%;animation:spin .7s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:450px){.wrap{padding:10px 11px 65px}.panel{padding:14px}.times strong{font-size:23px}.stations{grid-template-columns:1fr 1fr}.station{font-size:12px;padding:9px 8px}.hero{padding:18px}.go{width:100%}}
+.route-track{display:flex;align-items:center;justify-content:center;gap:0;margin:8px 0 4px;min-width:70px}.track-line{height:3px;background:#c8d7dc;flex:1;border-radius:6px;min-width:8px}.transfer-point{width:10px;height:10px;border:2px solid #167e6d;background:white;border-radius:100%;flex:none;margin:0 3px;box-shadow:0 0 0 2px white}.route-trains{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:5px;margin-top:9px}.train-pill{display:inline-block;padding:5px 9px;background:#173a4f;color:#fff;border-radius:7px;font-size:15px;line-height:1.25;font-weight:800;letter-spacing:-.2px;white-space:nowrap}.train-arrow{font-size:15px;color:#79939e;font-weight:800}.train-fallback{font-size:13px;color:#56717e}.walk-pill{display:inline-flex;align-items:center;gap:4px;padding:5px 8px;background:#fff3df;color:#865314;border:1px solid #f1c77b;border-radius:7px;font-size:12px;font-weight:800;white-space:nowrap}.walk-note{display:inline-block;margin-top:5px;color:#885b20;font-size:11px;font-weight:700}.walk-leg{background:#fff9f0;border-left:3px dashed #d49b36;padding:9px 10px;margin:5px 0;border-radius:5px}.walk-leg b{color:#875b21}.track-line.walk-line{background:repeating-linear-gradient(90deg,#bb8d39 0,#bb8d39 5px,transparent 5px,transparent 9px)}.centerline .duration{font-weight:650;font-size:12px;color:#617482}.centerline{min-width:90px}.times{gap:10px}@media(max-width:450px){.train-pill{font-size:14px;padding:4px 7px}.centerline{min-width:75px}} .morearea{text-align:center;margin:12px 0 22px}.morebutton{width:100%;padding:15px;font-size:14px;font-weight:750;border:1px solid #a6c9c0;color:#096656;background:#fff}.morebutton:hover{background:#e9f7f2}</style></head><body><main class="wrap"><header class="hero"><div class="brand"><div class="logo">🚆</div><div><h1>Mein Zug</h1><p>Die beste Verbindung zwischen Zürich und Winterthur</p></div></div></header>
+<section class="panel"><div class="sectionhead"><h2>Fahrtrichtung</h2><span class="small">Beide Richtungen möglich</span></div><div class="seg" role="group" aria-label="Fahrtrichtung"><button id="zw" class="active" type="button">Zürich → Winterthur</button><button id="wz" type="button">Winterthur → Zürich</button></div></section>
+<section class="panel"><div class="sectionhead"><h2>📍 Startbahnhöfe</h2><span id="scount" class="small"></span></div><div id="starts" class="stations"></div><div class="muted">Weiteren Schweizer Bahnhof hinzufügen</div><div class="searcharea"><input id="startInput" autocomplete="off" spellcheck="false" placeholder="Bahnhof suchen, z. B. Uster" aria-label="Startbahnhof suchen"><div id="startSuggestions" class="suggest" hidden></div></div><div id="startExtra" class="chips"></div></section>
+<section class="panel"><div class="sectionhead"><h2>🏁 Zielbahnhöfe</h2><span id="dcount" class="small"></span></div><div id="dests" class="stations"></div><div class="muted">Weiteren Schweizer Bahnhof hinzufügen</div><div class="searcharea"><input id="destInput" autocomplete="off" spellcheck="false" placeholder="Bahnhof suchen, z. B. Zürich Wollishofen" aria-label="Zielbahnhof suchen"><div id="destSuggestions" class="suggest" hidden></div></div><div id="destExtra" class="chips"></div></section>
+<section class="panel"><div class="options"><label class="checkline"><input type="checkbox" id="direct"> Nur Direktverbindungen</label><button class="go" id="search" type="button">🔎 Verbindungen suchen</button></div><p class="small" style="margin:11px 0 0">Busverbindungen werden grundsätzlich ausgeschlossen. Ohne Häkchen werden auch Zugverbindungen mit Umsteigen berücksichtigt. Zunächst 3 Verbindungen; über «Weitere Verbindungen laden» je 3 weitere. Sortierung: früheste Ankunft.</p></section>
+<div class="toolbar"><h2>Verbindungen</h2><button id="refresh" class="secondary" type="button">↻ Aktualisieren</button></div><div class="status" id="status" aria-live="polite">Wähle Bahnhöfe und starte die Suche.</div><div id="results"></div><div class="morearea"><button id="more" class="secondary morebutton" type="button" hidden>＋ Weitere 3 Verbindungen laden</button></div><footer class="foot">Nur Bahnverbindungen – Busabschnitte ausgeschlossen. Daten: <a href="https://transport.opendata.ch/" target="_blank" rel="noopener">Schweizer Transport API</a> (unabhängiger Dienst). Prognosen und Perrons nur, soweit verfügbar. Fahrplanangaben vor einer Reise mit den offiziellen Anzeigen überprüfen. Diese Test-App speichert Einstellungen nur auf deinem Gerät. Automatische Aktualisierung alle 3 Minuten bei geöffneter App. Die Vorschau innerhalb von ChatGPT kann externe API-Abfragen blockieren. <a href="https://transport.opendata.ch/v1/connections?from=Z%C3%BCrich%20HB&amp;to=Oberwinterthur&amp;limit=2" target="_blank" rel="noopener">API direkt prüfen</a>.</footer></main>
+<script>
+(()=>{'use strict';
+const Z=['Zürich HB','Zürich Stadelhofen','Zürich Hardbrücke'];const W=['Winterthur Hegi','Winterthur Grüze','Oberwinterthur'];const $=id=>document.getElementById(id);const state={dir:'zw',start:[],dest:[],extraStart:[],extraDest:[],direct:false};let running=0,updated=null,abort=null,refreshTimer=null;let allTrips=[],pairState=[],visibleCount=3,latestFailures=0;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function read(){try{const o=JSON.parse(localStorage.getItem('meinZug2026')||'{}');if(['zw','wz'].includes(o.dir))state.dir=o.dir;for(const k of ['start','dest','extraStart','extraDest'])if(Array.isArray(o[k]))state[k]=o[k].filter(x=>typeof x==='string').slice(0,20);state.direct=!!o.direct}catch{}if(!state.start.length&&!state.dest.length){state.start=[...(state.dir==='zw'?Z:W)];state.dest=[...(state.dir==='zw'?W:Z)]}}
+function save(){try{localStorage.setItem('meinZug2026',JSON.stringify(state))}catch{}}
+function active(k){return [...state[k],...state[k==='start'?'extraStart':'extraDest']].filter((v,i,a)=>a.indexOf(v)===i)}
+function render(){const first=state.dir==='zw'?Z:W,second=state.dir==='zw'?W:Z;$('zw').classList.toggle('active',state.dir==='zw');$('wz').classList.toggle('active',state.dir==='wz');for(const [k,els] of [['start',first],['dest',second]]){$(k==='start'?'starts':'dests').innerHTML=els.map(s=>`<label class="station"><input type="checkbox" data-group="${k}" data-name="${esc(s)}" ${state[k].includes(s)?'checked':''}><span>${esc(s)}</span></label>`).join('');const ek=k==='start'?'extraStart':'extraDest';$(k==='start'?'startExtra':'destExtra').innerHTML=state[ek].map(s=>`<span class="chip">${esc(s)} <button type="button" data-remove="${ek}" data-name="${esc(s)}" aria-label="${esc(s)} entfernen">×</button></span>`).join('')} $('scount').textContent=active('start').length+' ausgewählt';$('dcount').textContent=active('dest').length+' ausgewählt';$('direct').checked=state.direct;save()}
+function switchDir(d){if(d===state.dir)return;const oldS=[...state.start],oldD=[...state.dest];state.dir=d;state.start=d==='zw'?[...Z]:[...W];state.dest=d==='zw'?[...W]:[...Z];state.extraStart=[];state.extraDest=[];render();$('status').textContent='Richtung geändert. Suche erneut starten.';$('results').innerHTML='';search()}
+$('zw').onclick=()=>switchDir('zw');$('wz').onclick=()=>switchDir('wz');document.addEventListener('change',e=>{if(e.target.matches('input[data-group]')){const k=e.target.dataset.group,s=e.target.dataset.name;state[k]=e.target.checked?[...state[k],s]:state[k].filter(v=>v!==s);render()}else if(e.target===$('direct')){state.direct=e.target.checked;save();search()}});document.addEventListener('click',e=>{const b=e.target.closest('button[data-remove]');if(!b)return;state[b.dataset.remove]=state[b.dataset.remove].filter(x=>x!==b.dataset.name);render()});
+const base='https://transport.opendata.ch/v1';function setupSuggest(inputId,menuId,ek){const input=$(inputId),menu=$(menuId);let ctr=0,timer;const close=()=>{menu.hidden=true;menu.innerHTML=''};input.addEventListener('input',()=>{clearTimeout(timer);const q=input.value.trim();const n=++ctr;if(q.length<2){close();return}timer=setTimeout(async()=>{menu.hidden=false;menu.innerHTML='<button type="button" disabled>Suche Bahnhöfe …</button>';try{const res=await fetch(base+'/locations?'+new URLSearchParams({query:q,type:'station'}));if(!res.ok)throw Error('Suche nicht verfügbar');const json=await res.json();if(n!==ctr)return;const loc=(json.stations||[]).filter(v=>v.name&&v.id).filter((v,i,a)=>a.findIndex(w=>w.name===v.name)===i).slice(0,8);menu.innerHTML=loc.length?'':'<button disabled>Kein passender Bahnhof gefunden</button>';for(const st of loc){const b=document.createElement('button');b.type='button';b.textContent=st.name;b.onclick=()=>{if(!state[ek].includes(st.name)&&!state[ek==='extraStart'?'start':'dest'].includes(st.name))state[ek].push(st.name);input.value='';close();render()};menu.appendChild(b)}}catch(e){if(n===ctr)menu.innerHTML='<button disabled>Bahnhofssuche gerade nicht erreichbar</button>'}},300)});input.addEventListener('keydown',e=>{if(e.key==='Escape')close()});document.addEventListener('click',e=>{if(!input.parentElement.contains(e.target))close()})}
+setupSuggest('startInput','startSuggestions','extraStart');setupSuggest('destInput','destSuggestions','extraDest');
+function dt(value){if(!value)return null;const s=String(value).replace(/([+-]\d{2})(\d{2})$/,'$1:$2');let d=new Date(s);return isNaN(d)?null:d}
+const clock=d=>d?new Intl.DateTimeFormat('de-CH',{timeZone:'Europe/Zurich',hour:'2-digit',minute:'2-digit'}).format(d):'—';const fmtDate=d=>d?new Intl.DateTimeFormat('de-CH',{timeZone:'Europe/Zurich',day:'2-digit',month:'2-digit'}).format(d):'';
+const diffMin=(a,b)=>a&&b?Math.max(0,Math.round((b-a)/60000)):null;
+function trainLabel(j){
+  if(!j)return 'Zug';
+  const cat=String(j.category||'').trim().toUpperCase().replace(/\s+/g,'');
+  const number=String(j.number??'').trim();
+  const name=String(j.name||'').trim();
+  // Die API liefert bei journey.name teils eine interne Zugnummer (z.B. 019351).
+  // Die sichtbare Linienbezeichnung besteht aus journey.category + journey.number.
+  if(cat && number){
+    const cleanNumber=number.replace(/\s+/g,'');
+    if(cleanNumber.toUpperCase().startsWith(cat))return cleanNumber.toUpperCase();
+    return cat+cleanNumber;
+  }
+  // Falls keine separate Liniennummer geliefert wird, erkennbare Namen verwenden.
+  const named=name.match(/^(S|RE|IR|IC|EC|ICE|TGV|RJX|RJ|R|SN|B|BUS|TRAM)\s*([0-9]+[A-Z]?)$/i);
+  if(named)return named[1].toUpperCase()+named[2].toUpperCase();
+  if(cat && name && /^\d{1,3}[A-Z]?$/i.test(name))return cat+name;
+  if(name && !/^0\d{4,}$/.test(name))return name;
+  return cat||'Zug';
+}
+// Busse anhand der ursprünglichen API-Kategorie erkennen, nicht bloss
+// anhand der angezeigten Liniennummer (z.B. B680).
+function isBusJourney(j){
+ if(!j)return false;
+ const category=String(j.category||'').trim().toUpperCase();
+ const name=String(j.name||'').trim().toUpperCase();
+ const subcategory=String(j.subcategory||'').trim().toUpperCase();
+ return /^(B|BUS|NFB|NFO|POSTAUTO|POSTBUS|NACHTBUS)$/.test(category)
+  || /^(B|BUS|NFB|NFO|POSTAUTO|POSTBUS|NACHTBUS)$/.test(subcategory)
+  || /^(?:BUS|POSTAUTO|POSTBUS|NACHTBUS)\b/.test(name)
+  || (category==='' && /^B\s*\d+\b/.test(name));
+}
+function decode(c,s,d){
+ const dep=dt(c.from?.prognosis?.departure||c.from?.departure),arr=dt(c.to?.prognosis?.arrival||c.to?.arrival),scheduledDep=dt(c.from?.departure),scheduledArr=dt(c.to?.arrival);
+ if(!dep||!arr)return null;
+ const sections=(c.sections||[]).map(x=>{
+  const from=x.departure?.station?.name||'',to=x.arrival?.station?.name||'';
+  const legDep=dt(x.departure?.prognosis?.departure||x.departure?.departure);
+  const legArr=dt(x.arrival?.prognosis?.arrival||x.arrival?.arrival);
+  const walk=!x.journey && (!!x.walk || !!x.rental || !!from || !!to);
+  const seconds=Number(x.walk?.duration);
+  const mins=Number.isFinite(seconds)&&seconds>0?Math.ceil(seconds/60):diffMin(legDep,legArr);
+  return {type:walk?'walk':x.journey?'train':'unknown',isBus:isBusJourney(x.journey),line:x.journey?trainLabel(x.journey):'',from,to,dep:legDep,arr:legArr,minutes:mins,platform:x.departure?.prognosis?.platform||x.departure?.platform||''};
+ }).filter(x=>x.type!=='unknown');
+ const legs=sections.filter(x=>x.type==='train');
+ const walks=sections.filter(x=>x.type==='walk');
+ const transfers=Math.max(0,legs.length-1);
+ const cancelled=!!(c.from?.cancelled||c.to?.cancelled||c.sections?.some(x=>x.departure?.cancelled||x.arrival?.cancelled));
+ return {from:s,to:d,dep,arr,scheduledDep,scheduledArr,transfers,legs,sections,walks,hasBus:sections.some(x=>x.isBus),platform:c.from?.prognosis?.platform||c.from?.platform||'',cancelled,products:c.products||[],duration:diffMin(dep,arr)};
+}
+function swissDateTime(date){const x=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Zurich',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(date);const val=k=>x.find(p=>p.type===k)?.value||'';return {date:val('year')+'-'+val('month')+'-'+val('day'),time:val('hour')+':'+val('minute')}}
+async function requestPair(s,d,signal,after){const p=new URLSearchParams({from:s,to:d,limit:'6'});if(after){const when=swissDateTime(after);p.set('date',when.date);p.set('time',when.time)}const res=await fetch(base+'/connections?'+p,{signal});if(!res.ok)throw Error('HTTP '+res.status+(res.status===429?' (API begrenzt Anfragen)':''));const json=await res.json();return (json.connections||[]).map(c=>decode(c,s,d)).filter(Boolean)}
+// Hide an itinerary if its only extra destination is reached by walking from
+// a station which is already one of the selected destinations. This prevents
+// the same train appearing once as a trip to Oberwinterthur and again as a
+// trip to Hegi, with the same departure and a final walk.
+function isRedundantFinalWalk(t,selectedDestinations){
+ const segments=t.sections||[];
+ const lastRailIndex=segments.findLastIndex(x=>x.type==='train');
+ if(lastRailIndex<0||lastRailIndex===segments.length-1)return false;
+ const tail=segments.slice(lastRailIndex+1);
+ if(!tail.length||!tail.every(x=>x.type==='walk'))return false;
+ const railStop=segments[lastRailIndex].to;
+ const normalise=x=>String(x||'').normalize('NFKC').trim().toLocaleLowerCase('de-CH');
+ return Boolean(railStop && selectedDestinations.some(st=>normalise(st)===normalise(railStop)));
+}
+// A walking itinerary is redundant if another selected destination can be
+// reached from the very same first departure, without walking and no later.
+// Do not conflate unrelated trains which happen to depart at the same time.
+function sameInitialService(a,b){
+ const af=(a.sections||[]).find(x=>x.type==='train');
+ const bf=(b.sections||[]).find(x=>x.type==='train');
+ if(!af||!bf)return false;
+ const norm=x=>String(x||'').trim().toLocaleLowerCase('de-CH');
+ return norm(a.from)===norm(b.from)
+  && norm(af.from)===norm(bf.from)
+  && norm(af.to)===norm(bf.to)
+  && norm(af.line)===norm(bf.line)
+  && !!af.dep&&!!bf.dep&&af.dep.getTime()===bf.dep.getTime();
+}
+function removeRedundantWalkAlternatives(trips){
+ return trips.filter(candidate=>{
+  if(!candidate.walks?.length)return true;
+  return !trips.some(other=>other!==candidate
+   && (!other.walks||other.walks.length===0)
+   && other.arr<=candidate.arr
+   && sameInitialService(candidate,other));
+ });
+}
+// For residual itinerary variants, deduplicate on the actual train legs and
+// board time, not on the requested destination/arrival time alone.
+function railJourneyKey(t){
+ const rail=(t.sections||[]).filter(x=>x.type==='train');
+ if(!rail.length)return '';
+ return [t.from,t.dep.toISOString(),...rail.map(l=>[l.line,l.from,l.to,l.dep?.toISOString()||'',l.arr?.toISOString()||''].join('~'))].join('|');
+}
+function display(trips,failures){
+ const el=$('results');
+ if(!trips.length){el.innerHTML='<div class="empty">Keine passenden Verbindungen gefunden. Ändere die Auswahl oder probiere es später erneut.</div>';return}
+ el.innerHTML=trips.slice(0,visibleCount).map((t,i)=>{
+  const delay=t.scheduledDep&&t.dep?Math.round((t.dep-t.scheduledDep)/60000):0;
+  const minutes=Math.ceil((t.dep-new Date())/60000);
+  const count=minutes>0?'Abfahrt in '+minutes+' Min.':minutes===0?'Fährt jetzt':'Abfahrt vorbei';
+  const segments=t.sections.length?t.sections:(t.legs.length?t.legs:[]);
+  const routeTags=segments.map((l,k)=>{
+   const label=l.type==='walk'?'🚶 '+(l.minutes!=null?l.minutes+' Min.':'Fussweg'):l.line;
+   return `${k?'<span class="train-arrow" aria-hidden="true">›</span>':''}<span class="${l.type==='walk'?'walk-pill':'train-pill'}">${esc(label)}</span>`;
+  }).join('') || t.products.map(x=>`<span class="train-pill">${esc(x)}</span>`).join('') || '<span class="train-fallback">ÖV</span>';
+  const transferDots=Array.from({length:Math.min(6,t.transfers)},()=>'<span class="transfer-point" aria-hidden="true"></span>').join('');
+  const hasWalk=t.walks.length>0;
+  const lineVisual=`<div class="duration">${t.duration??'—'} Min.</div><div class="route-track" role="img" aria-label="${t.transfers===0?'Keine Zugwechsel':t.transfers+' Zugwechsel'}${hasWalk?', mit Fussweg':''}"><span class="track-line"></span>${transferDots}<span class="track-line ${hasWalk?'walk-line':''}"></span></div><div class="route-trains">${routeTags}</div>${hasWalk?'<span class="walk-note">🚶 Fussweg enthalten</span>':''}`;
+  const steps=segments.map(l=>{
+   if(l.type==='walk')return `<div class="leg walk-leg"><b>🚶 Fussweg${l.minutes!=null?' · '+l.minutes+' Min.':''}</b><div>${l.dep?clock(l.dep)+' ':''}${esc(l.from||'Start')} → ${l.arr?clock(l.arr)+' ':''}${esc(l.to||'Ziel')}</div></div>`;
+   return `<div class="leg"><b>${esc(l.line)}</b> · ${clock(l.dep)} ${esc(l.from)} → ${clock(l.arr)} ${esc(l.to)}${l.platform?' · Perron '+esc(l.platform):''}</div>`;
+  }).join('');
+  const serviceLabel=t.transfers===0?'Kein Zugwechsel':t.transfers+'× umsteigen';
+  return `<article class="card ${i===0?'best':''}"><div class="ribbons">${i===0?'<span class="tag besttag">★ Früheste Ankunft</span>':''}<span class="tag">${serviceLabel}</span>${hasWalk?'<span class="tag" style="background:#fff0d6;color:#855616">🚶 Fussweg</span>':''}${t.cancelled?'<span class="tag" style="background:#ffe2e2;color:#a1262b">Ausfall gemeldet</span>':''}${delay>0?`<span class="tag">+${delay} Min. Verspätung</span>`:''}</div><div class="times"><strong>${clock(t.dep)}</strong><div class="centerline">${lineVisual}</div><strong>${clock(t.arr)}</strong></div><div class="placegrid"><div><span class="small">Start</span><br><b>${esc(t.from)}</b></div><div><span class="small">Ziel</span><br><b>${esc(t.to)}</b></div></div><div class="detailhead"><span class="small">${esc(count)}${t.platform?' · Perron '+esc(t.platform):''}${t.scheduledDep&&fmtDate(t.dep)!==fmtDate(new Date())?' · '+fmtDate(t.dep):''}</span><button class="linkbtn" type="button" data-toggle="leg${i}" aria-expanded="false">Fahrtverlauf anzeigen ▾</button></div><div class="legs" id="leg${i}" hidden>${steps||'Keine detaillierten Teilstrecken verfügbar.'}</div></article>`;
+ }).join('');
+ for(const b of el.querySelectorAll('[data-toggle]'))b.onclick=()=>{const target=$(b.dataset.toggle);target.hidden=!target.hidden;b.setAttribute('aria-expanded',String(!target.hidden));b.textContent=target.hidden?'Fahrtverlauf anzeigen ▾':'Fahrtverlauf schliessen ▴'};
+}
+// Keep a separate pagination cursor for each start/destination pair so
+// services from frequent stations cannot be skipped by infrequent ones.
+function usableTrips(){
+ const targets=active('dest');
+ let all=allTrips.filter(t=>!t.hasBus&&t.dep>=new Date(Date.now()-90000)&&(!state.direct||(t.transfers===0&&!t.walks.some(w=>w.from&&w.to&&w.from!==w.to)))&&!t.cancelled);
+ all=all.filter(t=>!isRedundantFinalWalk(t,targets));
+ all=removeRedundantWalkAlternatives(all);
+ all.sort((a,b)=>a.arr-b.arr||a.transfers-b.transfers||a.dep-b.dep);
+ const seen=new Set(),seenRail=new Set();
+ return all.filter(t=>{
+  const key=t.from+'|'+t.to+'|'+t.dep.toISOString()+'|'+t.arr.toISOString();
+  if(seen.has(key))return false;
+  const railKey=railJourneyKey(t);
+  if(railKey&&seenRail.has(railKey))return false;
+  seen.add(key);if(railKey)seenRail.add(railKey);return true;
+ });
+}
+function updateResults(){
+ const list=usableTrips();display(list,latestFailures);
+ const possible=pairState.some(p=>!p.done);
+ $('more').hidden=!(list.length>visibleCount||possible&&list.length>0);
+ $('more').disabled=false;
+ $('more').textContent='＋ Weitere 3 Verbindungen laden';
+ if(updated)$('status').textContent=`${Math.min(list.length,visibleCount)} von ${list.length} gefundenen Verbindungen angezeigt · Stand ${clock(updated)}${latestFailures?' · '+latestFailures+' Abfrage(n) fehlgeschlagen':''}`;
+}
+async function fetchBatch(my){
+ let cursor=0,errors=[],fail=0,done=0;
+ const available=pairState.filter(p=>!p.done);
+ async function worker(){while(cursor<available.length&&my===running){
+  const p=available[cursor++];
+  try{
+   const arr=await requestPair(p.s,p.d,abort.signal,p.next);
+   allTrips.push(...arr);
+   if(arr.length){
+    // Use the scheduled board time to avoid refetching delayed departures.
+    const latest=Math.max(...arr.map(t=>(t.scheduledDep||t.dep).getTime()));
+    const candidate=new Date(latest+60000);
+    if(p.next&&candidate<=p.next)p.done=true;else p.next=candidate;
+   }else p.done=true;
+  }catch(e){if(e.name!=='AbortError'){fail++;errors.push(e.message||String(e));p.done=true}}
+  done++;
+  if(my===running)$('status').textContent='Vergleiche Verbindungen: '+done+' / '+available.length;
+ }}
+ await Promise.all(Array.from({length:Math.min(2,available.length)},()=>worker()));
+ return {fail,errors,total:available.length};
+}
+// We must complete the earliest-arrival window ACROSS ALL station pairs.
+// Merely having three results is not sufficient: a later API page for another
+// destination may still contain a journey arriving before result #3.
+async function completeWindow(my,needed,maxRounds=6){
+ let rounds=0,fail=0,errors=[];
+ while(my===running && rounds<maxRounds){
+  const found=usableTrips();
+  const boundary=found.length>=needed?found[needed-1].arr.getTime():Infinity;
+  // A not-yet-searched page can contain a competitive result unless the
+  // pair cursor is later than the currently last displayed arrival.
+  const outstanding=pairState.some(p=>!p.done && (!p.next || p.next.getTime()<=boundary));
+  if(!outstanding)break;
+  const result=await fetchBatch(my);
+  fail+=result.fail;errors.push(...result.errors);rounds++;
+ }
+ return {fail,errors};
+}
+async function search(){
+ const s=active('start'),d=active('dest');
+ if(!s.length||!d.length){$('status').textContent='Bitte mindestens einen Start- und einen Zielbahnhof auswählen.';return}
+ if(abort)abort.abort();
+ const my=++running;abort=new AbortController();
+ pairState=s.flatMap(a=>d.filter(b=>a!==b).map(b=>({s:a,d:b,next:null,done:false})));
+ allTrips=[];visibleCount=3;latestFailures=0;
+ $('results').innerHTML='';$('more').hidden=true;
+ $('search').disabled=true;$('refresh').disabled=true;
+ $('status').className='status';$('status').innerHTML='<span class="loadingdot"></span> Suche '+pairState.length+' Kombinationen …';
+ const {fail,errors}=await completeWindow(my,3);
+ if(my!==running)return;
+ latestFailures=fail;updated=new Date();
+ $('status').className='status'+(pairState.every(p=>p.done)&&!allTrips.length?' error':'');
+ updateResults();
+ if(pairState.every(p=>p.done)&&!allTrips.length)$('status').textContent=`Fahrplandaten konnten nicht geladen werden: ${[...new Set(errors)].slice(0,2).join(' / ')||'Netzwerkzugriff blockiert'}. Öffne die App im normalen Browser oder teste den API-Link unten.`;
+ $('search').disabled=false;$('refresh').disabled=false;
+}
+async function loadMore(){
+ if($('more').disabled)return;
+ const my=running;
+ const before=visibleCount;
+ const requested=before+3;
+ $('more').disabled=true;$('more').textContent='Lade spätere Verbindungen …';
+ // First reveal any prefetched results. Fetch later pages only if necessary.
+ const outcome=await completeWindow(my,requested,6);
+ latestFailures+=outcome.fail;
+ if(my!==running)return;
+ const available=usableTrips().length;
+ visibleCount=Math.min(requested,available);
+ updated=new Date();updateResults();
+ if(available<=before){$('status').textContent='Keine weiteren passenden Verbindungen gefunden. Versuche später erneut oder ändere die Auswahl.'}
+}
+$('search').onclick=search;$('refresh').onclick=search;$('more').onclick=loadMore;read();render();refreshTimer=setInterval(()=>{if(document.visibilityState==='visible'&&active('start').length&&active('dest').length)search()},180000);document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&updated&&Date.now()-updated>180000)search()});/* Abfrage bewusst nur per Klick starten: viele Kombinationen können die API belasten. */
+})();
+</script></body></html>
